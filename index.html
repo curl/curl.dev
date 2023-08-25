@@ -1,0 +1,158 @@
+<head>
+  <title>everything on curl development</title>
+</head>
+<body>
+<style>
+body {
+    margin: 0px 0px 0px 0px;
+    font-family: Lora, arial, helvetica, ariel, sans-serif;
+    font-size: 140%;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  text-decoration: none;
+  color: #4040ff;
+  background-color: #093754;
+}
+
+a.light {
+  text-decoration: none;
+  color: #093754;
+}
+a:hover.light {
+  text-decoration: none;
+  color: #4040ff;
+  background-color: #e0e0e0;
+}
+
+.title {
+    width: 50%;
+    background: #202020;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0px 10px 0px;
+}
+
+.withcurl {
+    width: 48%;
+    background: #093754;
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    height: 40%;
+}
+.withlib {
+    width: 48%;
+    background: #ffffff;
+    color: #093754;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    height: 40%;
+}
+.devcurl {
+    width: 48%;
+    background: #ffffff;
+    color: #0f564d;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    clear: left;
+    height: 100%;
+}
+.devlib {
+    width: 48%;
+    background: #0f564d;
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    height: 100%;
+}
+.term {
+    padding: 4px 4px 4px 4px;
+    border: 2px solid white;
+}
+.whiteterm {
+    padding: 4px 4px 4px 4px;
+    border: 2px solid #093754;
+}
+
+
+</style>
+
+<div class="title">
+  <center><h1>curl development</h1>
+    <a href="https://everything.curl.dev/">"everything curl"</a> <br>
+    <a href="https://curl.se/">curl.se</a>
+  </center>
+  <p>
+</div>
+
+<div class="withcurl">
+<h2>development with curl</h2>
+<pre class="term">
+$ curl https://example.com/
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;301 Moved Permanently&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+</pre>
+
+  <ol>
+    <li> <a href="https://everything.curl.dev/cmdline">Command line tool basics</a>
+    <li> <a href="https://everything.curl.dev/http">How to HTTP with the curl tool</a>
+    <li> <a href="https://everything.curl.dev/http/browserlike">Scripting browser-like tasks</a>
+  </ol>
+  
+</div>
+<div class="withlib">
+<h2>development with libcurl</h2>
+<pre class="whiteterm">
+  curl = curl_easy_init();
+  if(curl) {
+    curl_easy_setopt(curl, CURLOPT_URL, "https://curl.se");
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+
+    res = curl_easy_perform(curl);
+    curl_easy_cleanup(curl);
+  }
+</pre>
+  <ol>
+    <li> <a class="light" href="https://everything.curl.dev/libcurl">libcurl basics</a>
+    <li> <a class="light" href="https://everything.curl.dev/libcurl/drive">driving transfers with libcurl</a>
+    <li> <a class="light" href="https://everything.curl.dev/libcurl-http">HTTP with libcurl</a>
+  </ol>
+
+</div>
+
+<div class="devcurl">
+<h2>development of curl</h2>
+<pre class="whiteterm">
+$ ./configure
+$ make
+$ make install
+</pre>
+  <ol>
+    <li> <a class="light" href="https://everything.curl.dev/project">what is the curl project?</a>
+    <li> <a class="light" href="https://everything.curl.dev/opensource/license">the curl license</a>
+    <li> <a class="light" href="https://everything.curl.dev/source">curl source code</a>
+  </ol>
+
+</div>
+
+<div class="devlib">
+<h2>development of libcurl</h2>
+<pre class="term">
+$ ./configure
+$ make
+$ make install
+</pre>
+  <ol>
+    <li> <a href="https://everything.curl.dev/source/build">build from source</a>
+    <li> <a href="https://everything.curl.dev/internals">libcurl internals</a>
+    <li> <a href="https://everything.curl.dev/source/contributing">contribute</a>
+  </ol>
+</div>
+</body>
