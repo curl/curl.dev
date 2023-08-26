@@ -1,0 +1,139 @@
+:root {
+    --bg: #eeeeee;
+    --fg: #333333;
+    --blue-bg: #2b729f;
+    --green-bg: #148c7d;
+    --blue-fg: #093754;
+    --green-fg: #0f564d;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    /* Helvetica/Arial-based font stack so it looks the best across all browsers. */
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans",
+        "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+        "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva,
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: calc(1rem + 1vw);
+    line-height: 1.4;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+pre,
+code {
+    /* Monospace stack */
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-size: calc(1rem + 1vw);
+    white-space: break-spaces;
+}
+
+
+h2 {
+    font-size: calc(2rem + 1vw);
+}
+
+header {
+    font-weight: bold;
+    padding: 2vh;
+    font-size: calc(2.5rem + 1vw);
+}
+
+header {
+    text-align: center;
+}
+.nav-wrapper {
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+    padding: 1vh;
+}
+
+.grid-container {
+    display: grid;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.grid-item {
+    padding: 2vw;
+    display: inline-block;
+}
+
+ol {
+    display: inline;
+    text-align: left;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    color: var(--fg);
+    padding: 0.3rem 0.5rem;
+}
+
+a:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+
+
+.blue {
+    background-color: var(--blue-bg);
+    color: #eee;
+}
+
+.blue a,
+.green a {
+    color: #eee;
+}
+
+.green {
+    background-color: var(--green-bg);
+}
+
+.blue h2,
+.green h2 {
+    color: #eee;
+}
+
+.term {
+    padding: 1vw;
+    background-color: var(--fg);
+    color: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #eeeeee;
+        --bg: #202020;
+        --blue-fg: #2b729f;
+        --green-fg: #148c7d;
+        --blue-bg: #093754;
+        --green-bg: #0f564d;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--fg);
+    }
+
+    .term {
+        border: 2px solid var(--fg);
+    }
+
+    a:hover {
+        background-image: linear-gradient(rgb(255 255 255/20%) 0 0);
+    }
+}
