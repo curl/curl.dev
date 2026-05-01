@@ -7,6 +7,28 @@ body {
     margin: 0px 0px 0px 0px;
     font-family: Lora, arial, helvetica, ariel, sans-serif;
     font-size: 140%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+  flex-grow: 1;
+}
+.devcurl {
+  border-top: 1px solid #0f564d;
+}
+@media (min-width: 60em) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: min-content 1fr;
+  }
+  .devcurl {
+    border-top: none;
+  }
+}
+pre {
+  overflow-x: scroll;
 }
 a {
   text-decoration: none;
@@ -38,37 +60,24 @@ a:hover.light {
 }
 
 .withcurl {
-    width: 48%;
     background: #093754;
     color: #ffffff;
     padding: 10px 10px 10px 10px;
-    float: left;
-    height: 40%;
 }
 .withlib {
-    width: 48%;
     background: #ffffff;
     color: #093754;
     padding: 10px 10px 10px 10px;
-    float: left;
-    height: 40%;
 }
 .devcurl {
-    width: 48%;
     background: #ffffff;
     color: #0f564d;
     padding: 10px 10px 10px 10px;
-    float: left;
-    clear: left;
-    height: 100%;
 }
 .devlib {
-    width: 48%;
     background: #0f564d;
     color: #ffffff;
     padding: 10px 10px 10px 10px;
-    float: left;
-    height: 100%;
 }
 .term {
     padding: 4px 4px 4px 4px;
@@ -90,6 +99,7 @@ a:hover.light {
   <p>
 </div>
 
+<div class="content">
 <div class="withcurl">
 <h2>development with curl</h2>
 <pre class="term">
@@ -154,5 +164,6 @@ $ make install
     <li> <a href="https://everything.curl.dev/internals">libcurl internals</a>
     <li> <a href="https://everything.curl.dev/source/contributing">contribute</a>
   </ol>
+</div>
 </div>
 </body>
