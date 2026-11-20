@@ -1,0 +1,23 @@
+{
+  "name": "curl.dev",
+  "version": "0.1.0",
+  "description": "Static site for curl.dev",
+  "private": true,
+  "dependencies": {
+    "highlight.js": "^11.8.0",
+    "@fontsource/inter": "^4.5.13",
+    "@fontsource/lora": "^4.5.13",
+    "@fontsource/merriweather": "^4.5.13"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "vite": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "live-server --port=8080 --open=./public/index.html",
+    "serve": "npm run start"
+  }
+}

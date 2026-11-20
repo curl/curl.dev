@@ -1,0 +1,44 @@
+:root{
+  --bg:#f5f8fb; --card:#ffffff; --accent:#093754; --muted:#6b7280; --accent-2:#0c544c;
+  --radius:12px; --gap:20px; --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, Lora, Arial, sans-serif;background:var(--bg);color:#0f172a}
+a{color:var(--accent);text-decoration:none}
+header{background:linear-gradient(90deg, #07293a 0%, #0c544c 100%);color:#fff;padding:28px 20px}
+.wrap{max-width:var(--max-width);margin:0 auto}
+.header-row{display:flex;align-items:center;gap:16px}
+.logo-container{background:#fff;border-radius:50%;padding:8px;box-shadow:0 6px 18px rgba(12,37,51,0.08);display:inline-flex;align-items:center;justify-content:center}
+.logo{height:72px;width:auto;display:block}
+/* Headings: use Merriweather for a more classic, readable display */
+h1, h2, h3, h4, h5, h6 { font-family: Merriweather, serif; margin:0 }
+h1 { font-size:28px }
+header nav{margin-left:auto}
+header nav a{color:rgba(255,255,255,0.9);margin-left:16px;font-weight:600}
+
+main{padding:32px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--gap);max-width:var(--max-width);margin:0 auto}
+
+/* Desktop: force two columns */
+@media (min-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(12,37,51,0.06);min-height:160px;position:relative}
+.card h2{margin:0 0 10px 0;color:var(--accent-2);font-size:18px}
+.code{background:#0b2f3a;color:#dff6f3;padding:12px;border-radius:8px;font-family:monospace;font-size:0.95em;overflow:auto;white-space:pre}
+ol{padding-left:1.1rem;margin:12px 0 0 0;color:var(--muted)}
+.footer{max-width:var(--max-width);margin:28px auto;color:var(--muted);font-size:0.95em;padding:8px}
+
+.code-wrap{position:relative}
+.copy-btn{position:absolute;right:10px;top:10px;background:rgba(255,255,255,0.95);border:1px solid rgba(12,37,51,0.06);padding:6px 10px;border-radius:8px;font-size:0.85rem;cursor:pointer;color:var(--accent-2)}
+.copy-btn:active{transform:translateY(1px)}
+.copy-success{position:absolute;right:10px;top:40px;background:#0c544c;color:white;padding:6px 8px;border-radius:6px;font-size:0.8rem;opacity:0;transition:opacity .18s ease}
+.copy-success.show{opacity:1}
+
+/* spacing between stacked code blocks */
+.code-wrap{margin-bottom:12px}
+
+@media (max-width:520px){header .header-row{flex-direction:column;align-items:flex-start} .header-row nav{margin-left:0}}
+
+/* small improvements for pre formatting */
+pre.code{margin:0;line-height:1.45}
