@@ -1,1 +1,1 @@
-RedirectMatch "(.*)" https://curl.se$1"
+RedirectMatch "(.*)" https://curl.se$1
